@@ -9,12 +9,12 @@ function getEntrySources(sources) {
 }
 
 var ngAdminSources = [
-    './src/javascripts/ng-admin.js',
+    './src/javascripts/app/app.js',
     './src/sass/ng-admin.scss'
 ];
 
 var ngAdminAndVendorSources = [
-    './src/javascripts/ng-admin.js',
+    './src/javascripts/app/app.js',
     './src/javascripts/vendors.js',
     'font-awesome/scss/font-awesome.scss',
     'bootstrap-sass/assets/stylesheets/_bootstrap.scss',
