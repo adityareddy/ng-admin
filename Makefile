@@ -5,6 +5,9 @@ install:
 	./node_modules/protractor/bin/webdriver-manager update
 
 run: 
+	@echo "**************************************************"
+	@echo "* open http://localhost:8000/webpack-dev-server/ *"
+	@echo "**************************************************"
 	@./node_modules/webpack-dev-server/bin/webpack-dev-server.js --colors --devtool cheap-module-inline-source-map --port 8000 --inline --hot
 
 build:

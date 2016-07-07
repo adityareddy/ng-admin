@@ -1,14 +1,25 @@
 require('es6-promise').polyfill(); // for IE
 
-require('./Main/MainModule');
-require('./Crud/CrudModule');
+require('./core/core.module');
+require('./crud/crud.module');
+require('./dashboard/dashboard.module');
+require('./filters/filters.module');
+require('./layout/layout.module');
 
 import Factory from 'admin-config/lib/Factory';
 
 var factory = angular.module('AdminDescriptionModule', []);
 factory.constant('AdminDescription', new Factory());
 
-var app = angular.module('rdApp', ['ui.select', 'main', 'crud', 'AdminDescriptionModule']);
+var app = angular.module('rdApp', [
+    'ui.select',
+    'AdminDescriptionModule',
+    'app.core',
+    'app.crud',
+    'app.dashboard',
+    'app.filters',
+    'app.layout'
+]);
 app.config(function (NgAdminConfigurationProvider, AdminDescription) {
     NgAdminConfigurationProvider.setAdminDescription(AdminDescription);
 });
